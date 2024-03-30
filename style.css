@@ -1,0 +1,217 @@
+/*#region page*/
+html {
+  scroll-behavior: smooth; /*добавление плавной прокрутки между меню */
+}
+
+body {
+  margin: 0; /*border: 5px solid;бордер-рамка, толщина рамки px, солид-сплошная, margin - внешние отступы 0-без отступов*/
+  font-family: "Inter", sans-serif;
+  color: #292929;
+  font-size: 16px;
+  line-height: 140%;
+}
+/*#endregion page*/
+/*#region header*/
+
+.header {
+  display: flex; /*елементы в один ряд*/
+  flex-direction: column; /*колонка*/
+  justify-content: space-between; /*розподілення вмісту-вільне місце між елементами*/
+  box-sizing: border-box; /*растянуть на весь хедер с рамками*/
+
+  height: 100vh; /*растянуть на 100%*/
+  padding: 64px 120px; /*внутренний отступ горизонтальный и вертикальный*/
+  background-image: url(img/Headphones-image-1.png); /*картинкана фон*/
+  background-position: center; /*картинка по центру*/
+  background-repeat: no-repeat; /*чтобы фон не повторялся*/
+  background-size: cover; /*растянуть на весь хедер с рамками*/
+}
+
+.header__top /*точка в начале.header__top - стилизация по класу*/ {
+  display: flex; /*елементы в один ряд*/
+  justify-content: space-between; /*розподілення вмісту-вільне місце між елементами*/
+}
+
+.header__title {
+  margin-top: 40px;
+  margin-bottom: 0;
+  font-size: 48px;
+  line-height: 100%;
+  font-style: italic;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+/*#endregion*/
+/*#region menu*/
+.menu {
+  position: fixed; /*размещение от верхнего края страниці*/
+  top: 0; /*размещение от верхнего края страниці*/
+  right: 0; /*растянуть меню от левого края до правого поставить райт лефт 0*/
+  left: 0; /*растянуть меню от левого края до правого*/
+  transform: translateX(
+    -100%
+  ); /*трансформировать елемент по горизонтали влево*/
+  transform: transform 500ms;
+  box-sizing: border-box; /*растянуть на весь хедер с рамками*/
+  height: 100vh; /*растянуть на 100%*/
+  padding: 64px 120px;
+  background: #e5e5e5;
+}
+.menu:target {
+  transform: translateX(-0);
+}
+
+.menu_top  /*стилизация вцелом блока*/ {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 64px; /*отступ для меню от логотипа*/
+}
+/*#endregion*/
+/*#region nav*/
+.nav {
+  display: flex; /*парметр добавляет ориентацию в пространстве*/
+  flex-direction: column; /*ставит сыылки в колонку*/
+  gap: 32px; /*вертикальное расстояние между елементами*/
+}
+.nav__link  /*стизация именно  навигационных ссылок*/ {
+  color: #292929; /*ссылки стали черными*/
+  text-decoration: none; /*none убрать подчеркивания*/
+  font-weight: bold; /*жирный шрифт для ссылок*/
+  font-size: 22px;
+  line-height: 22px; /*сколько пикселей занимает каждая буква максимально*/
+  text-transform: uppercase; /*все буквы большие для ссылок*/
+  letter-spacing: 2px; /*расстояние между буквами*/
+}
+/*#endregion*/
+
+.main {
+  padding: 120px;
+  background-color: white; /*прописать цвет фона чтобі футер не просвечивал */
+}
+
+/* #region recommended */
+.recommended/*устанавливаем расстояние между секциями 120пикселей*/ {
+  margin-bottom: 120px;
+}
+
+.recommended__title {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+
+.recommended__products/*поместили елементы product внутро дива чтобы сделать их горизонтальными в отл от умолчания-->*/ {
+  display: flex; /*если не поставить развалиться блок*/
+  justify-content: center; /*если не поставить сьедет вбок*/
+  gap: 24px; /*расстояние между елементами*/
+}
+.product /*для всех елементов добавить особенность растягивать в зависимости к окну*/ {
+  flex-grow: 1px;
+}
+
+.product__photo /*для фото усановка адаптирования под окно чтобы все помещались*/ {
+  width: 100%; /*для фото полная ширина*/
+  margin-bottom: 32px; /*внешний отступ внизу для фото*/
+}
+
+.product__title/*название товара*/ {
+  margin-top: 0; /*если нужно убрать отступ сверху*/
+  margin-bottom: 8px; /*внешний отступ внизу для текста*/
+}
+
+.product__category/*название категори товара*/ {
+  margin-top: 0; /*если нужно убрать отступ сверху*/
+  margin-bottom: 12px; /*внешний отступ внизу для текста*/
+}
+
+.product__price /*цена товара*/ {
+  margin: 0; /*убрать все отступі*/
+  font-weight: bold; /*цена товара жирнім*/
+}
+/* #endregion */
+
+/* #region categories */
+.categories /*обраничить максимальную ширину блока*/ {
+  max-width: 1020px; /*обраничить максимальную ширину блока*/
+  margin: 0 auto;
+}
+.categories__title {
+  margin-top: 0;
+  margin-bottom: 64px;
+  font-size: 48px;
+  line-height: 100%;
+  font-weight: bold;
+  text-align: center;
+  letter-spacing: -1.5px;
+}
+/* #endregion */
+/* #region category */
+.category {
+  margin-bottom: 64px; /*отступ для меню от логотипа*/
+}
+
+.category__photos /*чтобы картинки в один ряд*/ {
+  display: flex;
+  gap: 3%; /*расстояние между елементами категории в данном случае фото*/
+  margin-bottom: 16px; /*отступ для меню от логотипа*/
+}
+
+.category__title {
+  margin: 0; /*без отступов*/
+}
+/* #endregion */
+/* #region photo */
+.photo-wide /*можем испльзовать в процентах для указания занимаемой площади фото*/ {
+  width: 65%;
+}
+.photo-square/*можем испльзовать в процентах для указания занимаемой площади фото*/ {
+  width: 32%;
+}
+/* #endregion */
+/* #region how-to-buy */
+.how-to-buy /*заголовок*/ {
+  max-width: 1020px; /*макс ширина*/
+  margin: 0 auto; /*центрированмие*/
+  display: flex;
+  gap: 24px;
+}
+.how-to-buy__title {
+  flex-basis: 50%; /*занять полоаину екрана ето уникаоная задачв*/
+  margin-top: 0; /*отступ сверху 0 убрать*/
+  margin-bottom: 64px; /*отступ снизу*/
+  font-size: 48px; /*размер шрифта*/
+  line-height: 100%;
+  font-weight: bold;
+  letter-spacing: -1.5px;
+}
+.how-to-buy__content {
+  flex-basis: 50%; /*занять вторую полоаину екрана ето ун задачв*/
+}
+.how-to-buy__benefits {
+  display: flex;
+  flex-direction: column; /*для списка колоной поставить*/
+  gap: 16px; /*расст между елементами*/
+  list-style: none; /*убрать точки в списке*/
+  padding: 0; /*убрать отступы*/
+  margin: 0; /*убрать вертикальные отс*/
+  margin-bottom: 40px; /*отступ снизу*/
+  font-weight: bold; /*жирные*/
+}
+/* #endregion */
+/* #region footer */
+.footer {
+  position: sticky; /*картинкастоит но страница прокручиваеться*/
+  bottom: 0; /*куда прилеплена картинка 0 вниз*/
+  z-index: -1; /*картинка устанавливается под контент*/
+  height: 460px; /*высота*/
+  background-image: url(img/categories/Rectangle\ 27.png); /*вставитьь картинку*/
+  background-position: center; /*параметры для фоновой картинки*/
+  background-repeat: no-repeat; /*параметры для фоновой картинки*/
+  background-size: cover; /*параметры для фоновой картинки*/
+}
+/* #endregion */

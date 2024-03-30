@@ -1,0 +1,207 @@
+<!-- #region head -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- служебная часть сайта где все подключается webref сайт смотреть теги  -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--Між відкриваючим та закриваючим тегами знаходиться контент тегу,У HTML-документі елемент складається з тегу та контенту тегу. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!--google fonts inter выбрать нужный размер нажать + и скопировать строку справа сюда + в стили бади-->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+    <!--ссылка на стили, тег link  та його атрибут rel href,а їх значення вказуються всередині подвійних лапок. Декілька атрибутів розділяються пробілом.Для того, щоб дізнатися які атрибути доступні для тегу та призначення атрибутів, можна зайти в документацію або довідник-->
+  </head>
+  <!-- #endregion-->
+  <body id="home">
+    <!--тело сайта, все что видит пользователь, style - стиль, кордоны бордер толщина рамки солид суцильна, можем посавить айди главной станиці home-->
+    <header class="header">
+      <div class="header__top">
+        <!--клас - имя елемента по которому можем стилизовать -->
+        <img
+          src="img/Logo.png"
+          alt="Bose Logo"
+        /><!--изображение срс путь, альт текст подсказка -->
+        <a href="#menu"
+          ><!--обернуть изображение НУЖНО СТАВИТЬ РЕШОТКУ ЧТОБІ РАБОТАЛО КАК ССІЛКА -->
+          <img src="img/icons/Icon-Burger-menu.png" alt="Burger menu" />
+        </a>
+      </div>
+
+      <div class="header__bottom">
+        <!--структурирующий блок див-->
+        <img src="img/Sound waves.png" alt="Sound waves" />
+
+        <h1 class="header__title">
+          The world shades.
+          <br /><!--брейк перенос ряда-->
+          you music shades.
+        </h1>
+        <!--заголовок-->
+      </div>
+    </header>
+
+    <div class="menu" id="menu">
+      <div class="menu_top">
+        <img
+          src="img/Logo.png"
+          alt="Bose Logo"
+        /><!--изображение срс путь, альт текст подсказка -->
+        <a href="#home"
+          ><!--при нажатии на крестик прокрутка к началу страницы-->
+          <img src="img/icons/Icon-Close.png" alt="Close" />
+          <!--иконка крестика ссылается на закрытие и возврат к хоум, одиночніе теги служать для зміни властивостей документа, підключення файлів тощо.
+-->
+        </a>
+      </div>
+
+      <nav class="nav">
+        <!--тег навигации-->
+        <a href="#home" class="nav__link">Home</a
+        ><!--ссілки на страницы навигации добавляем клас для стилизации,кщо ми хочемо, щоб веб-сторінка, до якої веде посилання, відкривалася в новій вкладці браузера, необхідно додати тегу <a> атрибут target="_blank".-->
+        <a href="#recommended" class="nav__link">Recommended</a
+        ><!--ссілки на страницы навигации-->
+        <a href="#categories" class="nav__link">Categories</a
+        ><!--ссілки на страницы навигации-->
+        <a href="#how-to-buy" class="nav__link">How to buy</a
+        ><!--ссілки на страницы навигации-->
+      </nav>
+    </div>
+
+    <main class="main">
+      <!-- секция рекомедед-->
+      <section class="recommended" id="recommended" >
+        <!-- id якорь, связывает пункты меню при клике a href="#recommended" прокручивая до нужной страницы, и клас для всей секции рекомендед  -->
+        <h2 class="how-to-buy__title">How to buy</h2>
+        <!-- для заголовка использовался h2-->
+
+        <div class="recommended__products">
+          <!--поместили елементы product внутро дива чтобы сделать их горизонтальными в отл от умолчания-->
+          <article class="product">
+            <!-- если есть в середине секции завершоная информация про товар добавляем артикл, для всех елементов добавить клас растягивать в зависимости к окну-->
+            <img
+              src="img/products/Bose portable smar speacer.png"
+              alt="Bose portable smar speacer"
+              class="product__photo"
+            /><!-- ссілка на фото ,название товара, присвоение стиля-->
+            <h3 class="product__title">Bose portable smar speace</h3>
+            <!-- подзаголовок h3 идля него класс-->
+            <p class="product__category">Smart home</p>
+            <!-- для вставки текста обвічно исп параграф и для него класс-->
+            <p class="product__price">$ 399.00</p>
+            <!-- для вставки текста обвічно исп параграф и для него класс-->
+          </article>
+
+          <article class="product">
+            <img
+              src="img/products/SoundLink Flex Bluetooth speaker.png"
+              alt="SoundLink Flex Bluetooth speaker"
+              class="product__photo"
+            />
+            <h3 class="product__title">SoundLink Flex Bluetooth speaker</h3>
+            <p class="product__category">Portable bluetooth</p>
+            <p class="product__price">$ 149.00</p>
+          </article>
+
+          <article class="product">
+            <img
+              src="img/products/SoundLink Color Bluetooth speaker II.png"
+              alt="SoundLink Color Bluetooth speaker II"
+              class="product__photo"
+            />
+            <h3 class="product__title">SoundLink Color Bluetooth speaker II</h3>
+            <p class="product__category">Portable bluetooth</p>
+            <p class="product__price">$ 129.00</p>
+          </article>
+        </div>
+      </section>
+      <!-- секция рекомедед-->
+      <!-- секция категории-->
+      <section class="categories" id="categories">
+        <h2 class="categories__title">Browse Bose<br />products by category</h2>
+
+        <article class="category">
+          <div class="category__photos">
+            <img
+              src="img/categories/Vectorwith.png"
+              alt="Headphones & earbuds"
+              class="photo-wide"
+            /><!-- добавляем клас картинкам чтобы стилизовать-->
+            <img
+              src="img/categories/vecsc.png"
+              alt="Headphones & earbuds"
+              class="photo-square"
+            />
+          </div>
+          <h3 class="category__title">Headphones & earbuds</h3>
+        </article>
+
+        <article class="category">
+          <div class="category__photos">
+            <img
+              src="img/categories/Layer 48@1,5x.png"
+              alt="Speakers"
+              class="photo-wide"
+            />
+            <img
+              src="img/categories/Layer 50@1,5x.png"
+              alt="Speakers"
+              class="photo-square"
+            />
+          </div>
+          <h3 class="category__title">Speakers</h3>
+        </article>
+
+        <article class="category">
+          <div class="category__photos">
+            <img
+              src="img/categories/Layer 51@1,5x (3).png"
+              alt="Audio sunglasses"
+              class="photo-square"
+            />
+            <img
+              src="img/categories/0022 1.png"
+              alt="Audio sunglasses"
+              class="photo-wide"
+            />
+          </div>
+          <h3 class="category__title">Audio sunglasses</h3>
+        </article>
+      </section>
+      <!-- секция категории-->
+      <section class="how-to-buy" id="how-to-buy">
+        <h2 class="how-to-buy__title">
+          Why buy direct<br />
+          from Bose
+        </h2>
+        <!-- заголовок секции-->
+
+        <div class="how-to-buy__content">
+          <ul class="how-to-buy__benefits">
+            <li>Free 2-day shipping and returns</li>
+            <!-- контент списком-->
+            <li>90-day risk-free trial</li>
+            <li>World class customer service</li>
+            <li>My Bose account management</li>
+          </ul>
+
+          <p class="how-to-buy__description">
+            <!-- параграф с текстом-->
+            A great product is more than what’s in the box. It’s a promise of
+            premium performance, world-class support, and everything you expect
+            from a trusted brand. It’s just one of many reasons why you’ll shop
+            with confidence on Bose.com.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer"></footer>
+  </body>
+</html>
